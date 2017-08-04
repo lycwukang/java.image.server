@@ -30,3 +30,20 @@ if (result.getSuccess()) {
     System.out.println("图片上传失败，原因：" + result.getMessage());
 }
 ```
+
+图片处理参数：
+--------------
+
+访问image-web全路径：<br>
+http://image-web/图片.jpeg?process=resize,m_lfit,w_600,h_500,limit_0
+
+    在需要处理的图片后添加process参数，process值的解释如下：
+    * resize表示要对图片进行缩放处理
+    * m_{}表示对图片进行缩放的模式
+        * lfit：等比缩放，限制在设定在指定w与h的矩形内的最大图片。
+        * mfit：等比缩放，延伸出指定w与h的矩形框外的最小图片。
+        * fixed：固定宽高，强制缩略
+    * w_{}表示图片宽度
+    * h_{}表示图片高度
+        * 图片宽度和高度必须填写一项
+    * limit_{}表示缩略图大于原图时是否处理，可选值0表示处理，1表示不处理，limit_1会产生大于原图的缩略图
