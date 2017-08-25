@@ -26,7 +26,8 @@ class HttpImageUpload {
             "image/bmp",
             "image/gif",
             "image/jpeg",
-            "image/jpeg"
+            "image/jpeg",
+            "image/png"
     };
 
     static {
